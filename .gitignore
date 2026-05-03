@@ -1,0 +1,24 @@
+# Python environment
+venv/
+env/
+bin/
+include/
+lib/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment secrets (CRITICAL: Do not commit this)
+.env
+
+# IDE and Editor files
+.vscode/
+.idea/
+.DS_Store
+
+# Log files and database dumps
+*.log
+*.sqlite3
