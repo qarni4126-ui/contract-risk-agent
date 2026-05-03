@@ -8,7 +8,12 @@ import pytesseract
 
 # ============ WINDOWS TESSERACT PATH ============
 
-pytesseract.pytesseract.pytesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+if os.name == 'nt':  # Check if running on Windows
+    pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+else:
+    # On Linux/Cloud, we don't need to specify the path, 
+    # it uses the system default installed by packages.txt
+    pass
 # ================================================
 
 import PyPDF2
